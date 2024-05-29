@@ -76,11 +76,12 @@ onMounted(() => {
             </div>
           </NcMenuItem>
           <NcDivider />
+          <!-- modified by xujie start -->
           <a
             v-e="['c:nocodb:discord']"
             href="https://discord.gg/5RgZmkW"
             target="_blank"
-            class="!underline-transparent"
+            class="!underline-transparent hidden"
             rel="noopener noreferrer"
           >
             <NcMenuItem class="social-icon-wrapper">
@@ -92,7 +93,7 @@ onMounted(() => {
             v-e="['c:nocodb:reddit']"
             href="https://www.reddit.com/r/NocoDB"
             target="_blank"
-            class="!underline-transparent"
+            class="!underline-transparent hidden"
             rel="noopener noreferrer"
           >
             <NcMenuItem class="social-icon-wrapper">
@@ -104,7 +105,7 @@ onMounted(() => {
             v-e="['c:nocodb:twitter']"
             href="https://twitter.com/nocodb"
             target="_blank"
-            class="!underline-transparent"
+            class="!underline-transparent hidden"
             rel="noopener noreferrer"
           >
             <NcMenuItem class="social-icon-wrapper group">
@@ -112,6 +113,7 @@ onMounted(() => {
               <span class="menu-btn"> {{ $t('labels.twitter') }} </span>
             </NcMenuItem>
           </a>
+          <!-- modified by xujie end -->
           <template v-if="!appInfo.ee">
             <NcDivider />
             <a-popover key="language" class="lang-menu !py-1.5" placement="rightBottom">
@@ -139,11 +141,12 @@ onMounted(() => {
           <template v-if="!isMobileMode">
             <NcDivider />
 
+            <!-- modified by xujie start -->
             <a
               v-e="['c:nocodb:forum-open']"
               href="https://community.nocodb.com"
               target="_blank"
-              class="!underline-transparent"
+              class="!underline-transparent hidden"
               rel="noopener"
             >
               <NcMenuItem>
@@ -151,6 +154,7 @@ onMounted(() => {
                 <span class="menu-btn"> {{ $t('title.forum') }} </span>
               </NcMenuItem>
             </a>
+            <!-- modified by xujie end -->
 
             <a
               v-e="['c:nocodb:docs-open']"
@@ -178,9 +182,11 @@ onMounted(() => {
     </NcDropdown>
 
     <template v-if="isMobileMode || appInfo.ee"></template>
-    <div v-else class="flex flex-row w-full justify-between pt-0.5 truncate">
+    <!-- modified by xujie start -->
+    <div v-else class="flex flex-row w-full justify-between pt-0.5 truncate hidden">
       <GeneralJoinCloud />
     </div>
+    <!-- modified by xujie end -->
   </div>
 </template>
 

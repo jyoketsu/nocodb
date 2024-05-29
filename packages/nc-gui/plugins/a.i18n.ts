@@ -5,7 +5,8 @@ let globalI18n: NocoI18n
 
 export const createI18nPlugin = async (): Promise<NocoI18n> =>
   createI18n({
-    locale: 'en', // Set the initial locale
+    // modified by xujie
+    locale: 'zh-CN', // Set the initial locale
 
     fallbackLocale: 'en', // Set the fallback locale in case the current locale can't be found
 
